@@ -1,0 +1,30 @@
+# Flux Server - Consciousness-Enhanced Knowledge Retrieval
+# Dependencies for standalone operation (no Docker required)
+
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Data Validation
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Database Clients (native connections)
+neo4j==5.14.0
+redis==5.0.1
+
+# HTTP Client
+httpx==0.25.1
+
+# LLM Integration (for response synthesis)
+# Note: Requires local Ollama installation (brew install ollama)
+# No cloud dependencies
+numpy==1.26.0
+
+# Optional: Async support
+uvloop==0.19.0
+
+# Testing (development only)
+pytest==7.4.3
+pytest-asyncio==0.21.1
