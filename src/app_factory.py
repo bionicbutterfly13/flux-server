@@ -44,11 +44,12 @@ def create_app() -> FastAPI:
     )
 
     # Import routes (deferred to avoid circular imports)
-    from src.api.routes import query, clause
+    from src.api.routes import query, clause, stats
 
     # Register routes
     app.include_router(query.router)
     app.include_router(clause.router)
+    app.include_router(stats.router)
 
     @app.get("/")
     async def root():

@@ -1,0 +1,24 @@
+# Flux Server LLM routing policies
+policies:
+  - task_type: chat
+    primary_provider: ollama.deepseek-r1
+    fallback_providers:
+      - openai.gpt-4o
+      - anthropic.claude-3-sonnet
+    timeout_ms: 12000
+    retry_limit: 2
+
+  - task_type: query_rewrite
+    primary_provider: ollama.deepseek-r1
+    fallback_providers:
+      - openai.gpt-4o
+    timeout_ms: 8000
+    retry_limit: 1
+
+  - task_type: analysis
+    primary_provider: ollama.qwen2.5-14b
+    fallback_providers:
+      - openai.gpt-4o
+      - anthropic.claude-3-sonnet
+    timeout_ms: 15000
+    retry_limit: 2

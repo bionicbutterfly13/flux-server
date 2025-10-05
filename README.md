@@ -89,7 +89,7 @@ ollama pull llama2
 
 1. Open Neo4j Browser: http://localhost:7474
 2. Login with default credentials: `neo4j/neo4j`
-3. Change password to: `thoughtseed` (or update `.env` to match)
+3. Set a secure password (update `.env` with `NEO4J_PASSWORD=your_password`)
 4. Verify connection
 
 ### Step 4: Install Flux Server
@@ -122,7 +122,7 @@ nano .env
 
 **Key settings to verify**:
 ```
-NEO4J_PASSWORD=thoughtseed  # Match what you set in Neo4j
+NEO4J_PASSWORD=your_secure_password  # Match what you set in Neo4j
 PORT=9127
 OLLAMA_MODEL=llama2
 ```
