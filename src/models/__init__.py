@@ -10,18 +10,16 @@ from .attractor_basin import AttractorBasin
 
 # CLAUSE models (from clause/ subdirectory)
 from .clause.path_models import (
-    SubgraphRequest,
-    SubgraphResponse,
-    EdgeScore,
+    PathNavigationRequest,
+    PathNavigationResponse,
+    PathStep,
 )
 from .clause.curator_models import (
-    BasinStrengtheningRequest,
-    BasinStrengtheningResponse,
-    BasinInfo,
+    ContextCurationRequest,
+    ContextCurationResponse,
+    SelectedEvidence,
 )
 from .clause.shared_models import (
-    EdgeScoringRequest,
-    EdgeScoringResponse,
     StateEncoding,
     BudgetUsage,
 )
@@ -35,16 +33,14 @@ __all__ = [
     # Consciousness
     "AttractorBasin",
     # CLAUSE path
-    "SubgraphRequest",
-    "SubgraphResponse",
-    "EdgeScore",
+    "PathNavigationRequest",
+    "PathNavigationResponse",
+    "PathStep",
     # CLAUSE curator
-    "BasinStrengtheningRequest",
-    "BasinStrengtheningResponse",
-    "BasinInfo",
+    "ContextCurationRequest",
+    "ContextCurationResponse",
+    "SelectedEvidence",
     # CLAUSE shared
-    "EdgeScoringRequest",
-    "EdgeScoringResponse",
     "StateEncoding",
     "BudgetUsage",
 ]
